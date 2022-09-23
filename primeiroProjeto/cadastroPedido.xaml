@@ -1,0 +1,44 @@
+﻿<Window x:Class="primeiroProjeto.cadastroPedido"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:primeiroProjeto"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="Novo Pedido" Height="488" Width="647">
+    <Grid Margin="0,0,0,5">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FF679DC7"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Id:" HorizontalAlignment="Left" Height="30" Margin="26,19,0,0" VerticalAlignment="Top" Width="53" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Titular:" HorizontalAlignment="Left" Height="30" Margin="26,59,0,0" VerticalAlignment="Top" Width="70" FontSize="14" FontWeight="Bold"/>
+        <Label Content="Produtos:" HorizontalAlignment="Left" Height="30" Margin="19,259,0,0" VerticalAlignment="Top" Width="84" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="txtIdProduto" HorizontalAlignment="Left" Height="30" Margin="115,19,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" IsEnabled="False"/>
+        <TextBox x:Name="txtTitular" HorizontalAlignment="Left" Height="30" Margin="115,59,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207" IsEnabled="False"/>
+        <Button x:Name="btnFinalizar" Content="FINALIZAR" HorizontalAlignment="Left" Height="32" Margin="356,387,0,0" VerticalAlignment="Top" Width="240" FontWeight="Bold"/>
+        <ListView x:Name="listaProdutos" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="115,259,325,86">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Valor Total:" HorizontalAlignment="Left" Height="30" Margin="19,388,0,0" VerticalAlignment="Top" Width="84" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="txtValorTotal" HorizontalAlignment="Left" Height="30" Margin="115,387,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="207"/>
+        <Label Content="Data da Venda:" HorizontalAlignment="Left" Height="30" Margin="356,351,0,0" VerticalAlignment="Top" Width="116" FontSize="14" FontWeight="Bold"/>
+        <TextBox x:Name="textDataVenda" HorizontalAlignment="Left" Height="30" Margin="472,351,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="124"/>
+        <RadioButton x:Name="btnDinheiro" Content="Dinheiro" HorizontalAlignment="Left" Height="18" Margin="26,142,0,0" VerticalAlignment="Top" Width="110" FontSize="14" FontWeight="Bold" GroupName="pagamento" IsChecked="False"/>
+        <RadioButton x:Name="btnCartao" Content="Cartão" HorizontalAlignment="Left" Height="18" Margin="141,142,0,0" VerticalAlignment="Top" Width="110" FontSize="14" FontWeight="Bold" GroupName="pagamento"/>
+        <RadioButton x:Name="btnBoleto" Content="Boleto" HorizontalAlignment="Left" Height="18" Margin="251,142,0,0" VerticalAlignment="Top" Width="110" FontSize="14" FontWeight="Bold" GroupName="pagamento"/>
+        <Label Content="Forma de Pagamento:" HorizontalAlignment="Left" Height="30" Margin="26,107,0,0" VerticalAlignment="Top" Width="296" FontSize="14" FontWeight="Bold"/>
+        <RadioButton x:Name="btnPendente" Content="Pendente" HorizontalAlignment="Left" Height="18" Margin="26,201,0,0" VerticalAlignment="Top" Width="110" FontSize="14" FontWeight="Bold" IsChecked="True" GroupName="status"/>
+        <RadioButton x:Name="btnPago" Content="Pago" HorizontalAlignment="Left" Height="18" Margin="141,201,0,0" VerticalAlignment="Top" Width="110" FontSize="14" FontWeight="Bold" GroupName="status"/>
+        <RadioButton x:Name="btnEnviado" Content="Enviado" HorizontalAlignment="Left" Height="18" Margin="26,224,0,0" VerticalAlignment="Top" Width="110" FontSize="14" FontWeight="Bold" GroupName="status"/>
+        <Label Content="Status:" HorizontalAlignment="Left" Height="30" Margin="26,166,0,0" VerticalAlignment="Top" Width="296" FontSize="14" FontWeight="Bold"/>
+        <RadioButton x:Name="btnRecebido" Content="Recebido" HorizontalAlignment="Left" Height="18" Margin="141,224,0,0" VerticalAlignment="Top" Width="110" FontSize="14" FontWeight="Bold" GroupName="status"/>
+    </Grid>
+</Window>

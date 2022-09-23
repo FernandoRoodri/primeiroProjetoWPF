@@ -1,0 +1,25 @@
+﻿<Window x:Class="primeiroProjeto.viewProduto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:primeiroProjeto"
+        ResizeMode="NoResize"
+        mc:Ignorable="d"
+        Title="viewProduto" Height="450" Width="800">
+
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FF679DC7"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <DataGrid HorizontalAlignment="Center" Height="227" Margin="0,60,0,0" VerticalAlignment="Top" Width="750" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button Content="EXCLUIR" HorizontalAlignment="Left" Height="27" Margin="697,28,0,0" VerticalAlignment="Top" Width="70" Background="#FF860707" BorderBrush="White" Foreground="White" FontWeight="Bold"/>
+        <Button Content="EDITAR" HorizontalAlignment="Left" Height="27" Margin="623,28,0,0" VerticalAlignment="Top" Width="70" Background="#FFD2B912" BorderBrush="White" FontWeight="Bold" Foreground="White"/>
+        <Button Content="NOVO" HorizontalAlignment="Left" Height="27" Margin="547,28,0,0" VerticalAlignment="Top" Width="70" Background="#FF15BF27" BorderBrush="White" Foreground="#FFFDF9F9" FontWeight="Bold" Click="btnCadastroProduto"/>
+        <Button Content="Atualizar" HorizontalAlignment="Left" Height="27" Margin="17,28,0,0" VerticalAlignment="Top" Width="70" FontWeight="Bold"/>
+    </Grid>
+
+</Window>
